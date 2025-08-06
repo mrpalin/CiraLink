@@ -3,6 +3,7 @@
 [build]
   command = "npm run build"
   functions = "netlify/functions"
+  publish = "."
 
 # Redirect rule for the API proxy
 # This makes the function accessible via a cleaner URL.
