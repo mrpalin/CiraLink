@@ -1,0 +1,12 @@
+# Netlify configuration for CiraLink
+
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+
+# Redirect rule for the API proxy
+# This makes the function accessible via a cleaner URL.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api-proxy/:splat"
+  status = 200
